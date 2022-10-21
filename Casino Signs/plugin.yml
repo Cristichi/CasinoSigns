@@ -1,0 +1,30 @@
+name: CasinoSigns
+main: main.CristichiCasinoSigns
+version: 1.15
+api-version: 1.13
+depend: [Vault, Essentials]
+commands:
+  casinosigns:
+    description: Controla el plugin.
+    aliases: [cs, ccs]
+    usage: /cs help
+
+permissions:
+  casinosigns.*:
+    description: Allows access to everything.
+    children:
+      casinosigns.admin: true
+      casinosigns.create: true
+      casinosigns.use: true
+  casinosigns.admin:
+    description: Allows the user to use admin commands.
+    default: op
+    children:
+      casinosigns.create: true
+      casinosigns.use: true
+  casinosigns.create:
+    description: Allows the user to create casino signs.
+    default: true
+  casinosigns.use:
+    description: Allows the user to use casino signs.
+    default: true
